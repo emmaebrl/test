@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Énigme 1</title>
+</head>
+
+<body>
+
+    <h1>Énigme 1</h1>
+    <p>Résolvez l'énigme pour accéder à la suivante :</p>
+    <p>Quel est le nom du bar dans lequel tu es allé le soir ou tu as pécho ta go sure ?</p>
+
+    <form id="passwordForm">
+        <label for="password">Mot de passe :</label>
+        <input type="text" id="password" required>
+        <button type="button" onclick="checkPassword()">Valider</button>
+    </form>
+
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("password").value.toLowerCase();
+
+            if (password === "les tricheurs" || password === "tricheurs") {
+                window.location.href = "enigme2.html";
+            } else {
+                alert("Mot de passe incorrect. Réessayez !");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

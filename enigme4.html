@@ -1,0 +1,37 @@
+<!-- enigme4.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ... -->
+    <title>Énigme 4</title>
+</head>
+
+<body>
+
+    <h1>Énigme 4</h1>
+    <p>Résolvez l'énigme pour accéder à la liste d'affaires :</p>
+    <p>C'est qui le plus mignon des chats ?</p>
+
+    <form id="passwordForm">
+        <label for="password">Mot de passe :</label>
+        <input type="text" id="password" required>
+        <button type="button" onclick="checkPassword()">Valider</button>
+    </form>
+
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("password").value.toLowerCase();
+
+            // Vérifiez le mot de passe ici
+            if (password === "niagara") {
+                window.location.href = "liste_affaires.html";
+            } else {
+                alert("Mot de passe incorrect. Réessayez !");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

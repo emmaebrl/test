@@ -1,0 +1,39 @@
+<!-- enigme2.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Énigme 2</title>
+</head>
+
+<body>
+
+    <h1>Énigme 2</h1>
+    <p>Résolvez l'énigme pour accéder à la suivante :</p>
+    <p>Combien sur 10 aime tu ta copine ?</p>
+
+    <form id="passwordForm">
+        <label for="password">Mot de passe :</label>
+        <input type="text" id="password" required>
+        <button type="button" onclick="checkPassword()">Valider</button>
+    </form>
+
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("password").value.toLowerCase();
+
+            // Vérifiez le mot de passe ici
+            if (password === "gogolplex" || password === "un gogolplex") {
+                window.location.href = "enigme3.html";
+            } else {
+                alert("Mot de passe incorrect. Réessayez !");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!-- enigme3.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ... -->
+    <title>Énigme 3</title>
+</head>
+
+<body>
+
+    <h1>Énigme 3</h1>
+    <p>Résolvez l'énigme pour accéder à la suivante :</p>
+    <p>Ou est ce que vas tu dormir le Samedi 27 Janvier?</p>
+
+    <form id="passwordForm">
+        <label for="password">Mot de passe :</label>
+        <input type="text" id="password" required>
+        <button type="button" onclick="checkPassword()">Valider</button>
+    </form>
+
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("password").value.toLowerCase();
+
+            // Vérifiez le mot de passe ici
+            if (password === "le desert" || password === "desert") {
+                window.location.href = "enigme4.html";
+            } else {
+                alert("Mot de passe incorrect. Réessayez !");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
